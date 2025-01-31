@@ -8,7 +8,7 @@ if (!requireNamespace("DatawRappr", quietly = TRUE)) {
 
 # Load the datawrapper package
 library(DatawRappr)
-library(rdwd)
+#library(rdwd)
 
 # Retrieve API key from env
 api_key <- Sys.getenv("DATAWRAPPER_API_KEY")
