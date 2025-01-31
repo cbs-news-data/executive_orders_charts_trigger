@@ -14,9 +14,11 @@ jobs:
       with:
         r-version: '4.1.0'  # Specify a compatible R version
     - name: Install dependencies
+      env:
+        GITHUB_PAT: ${{ secrets.PAT_GITHUB }}
       run: |
         Rscript -e 'install.packages("remotes")'
-        Rscript -e 'remotes::install_github("munichrocker/DatawRappr")'
+        Rscript -e 'remotes::install_github("munichrocker/DatawRappr", auth_token = Sys.getenv("GITHUB_PAT"))'
     - name: Run R script
       env:
         DATAWRAPPER_API_KEY: ${{ secrets.DATAWRAPPER_API_KEY }}
