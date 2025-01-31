@@ -1,3 +1,5 @@
+library(devtools)
+
 # Install the necessary packages if not already installed
 if (!requireNamespace("devtools", quietly = TRUE)) {
   install.packages("devtools")
