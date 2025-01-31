@@ -1,14 +1,3 @@
-library(devtools)
-
-# Install the necessary packages if not already installed
-if (!requireNamespace("devtools", quietly = TRUE)) {
-  install.packages("devtools")
-}
-if (!requireNamespace("DatawRappr", quietly = TRUE)) {
-  devtools::install_github("munichrocker/DatawRappr")
-}
-
-# Load the datawrapper package
 library(DatawRappr)
 
 # Retrieve API key from env
