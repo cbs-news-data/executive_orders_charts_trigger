@@ -17,4 +17,4 @@ jobs:
     - name: Run R script
       env:
         DATAWRAPPER_API_KEY: ${{ secrets.DATAWRAPPER_API_KEY }}
-      run: Rscript your_script.R
+      run: Rscript update_charts.R
