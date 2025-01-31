@@ -11,10 +11,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: r-lib/actions/setup-r@v2
+      with:
+        r-version: '4.1.0'  # Specify a compatible R version
     - name: Install dependencies
       run: |
-        Rscript -e 'install.packages("devtools")'
-        Rscript -e 'devtools::install_github("munichrocker/DatawRappr")'
+        Rscript -e 'install.packages("remotes")'
+        Rscript -e 'remotes::install_github("munichrocker/DatawRappr")'
     - name: Run R script
       env:
         DATAWRAPPER_API_KEY: ${{ secrets.DATAWRAPPER_API_KEY }}
