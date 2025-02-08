@@ -46,5 +46,5 @@ dw_edit_chart(chart_id = 'NFqzJ', intro = paste0('<b>As of ',formatted_time,'</b
               </span>'))
 
 # Publish the charts
-dw_publish_chart(chart_id = 'l6Ftz')
-dw_publish_chart(chart_id = 'NFqzJ')
+#dw_publish_chart(chart_id = 'l6Ftz')
+#dw_publish_chart(chart_id = 'NFqzJ')
