@@ -16,7 +16,7 @@ jobs:
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
           packages: |
-            any::janitor
+            any::lubridate
 
       - name: Set up environment variables based on DATAWRAPPR secret
         run: echo "DATAWRAPPER_API_KEY=${{ secrets.DATAWRAPPER_API_KEY }}" >> $GITHUB_ENV
